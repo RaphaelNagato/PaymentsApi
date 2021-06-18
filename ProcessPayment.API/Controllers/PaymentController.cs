@@ -2,6 +2,7 @@
 using ProcessPayment.Commons;
 using ProcessPayment.Dto;
 using ProcessPayment.Models;
+using ProcessPayment.Models.ResponseModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -14,17 +15,18 @@ namespace ProcessPayment.API.Controllers
         [HttpPost("process-payment")]
         public async Task<IActionResult> ProcessPayment([FromBody] PaymentDetailsDto paymentDetails)
         {
-            List<KeyValue> listOfErrors = await Helper.ValidatePaymentDetails(paymentDetails);
-            Response result = new Response();
+            List<string> listOfErrors = await Helper.ValidatePaymentDetails(paymentDetails);
 
             if (listOfErrors.Count != 0)
             {
-                result.Message = "request is invalid";
-                result.Errors = listOfErrors;
-                return BadRequest(result);
+                var errorResponse = new ApiValidationErrorResponse
+                {
+                    Errors = listOfErrors
+                };
+                return BadRequest(errorResponse);
             }
 
-            result.Message = "request is successful";
+            var result = new ApiResponse(200);
             return Ok(result);
 
         }
