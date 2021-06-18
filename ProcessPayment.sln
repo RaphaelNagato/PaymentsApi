@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.API", "ProcessPayment.API\ProcessPayment.API.csproj", "{EC1EA093-6E6C-4E7A-8953-ECBB4C668374}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Data", "ProcessPayment.Data\ProcessPayment.Data.csproj", "{33BF2556-42AD-40B8-9A97-8752DDCED136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Models", "ProcessPayment.Models\ProcessPayment.Models.csproj", "{2EEC73B2-B9D8-4122-A785-D127E964FD04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Dto", "ProcessPayment.Dto\ProcessPayment.Dto.csproj", "{DBA90CB3-AACB-4385-989E-99033B2C136A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Commons", "ProcessPayment.Commons\ProcessPayment.Commons.csproj", "{199E6856-48CD-4182-A34B-190B77761E91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{EC1EA093-6E6C-4E7A-8953-ECBB4C668374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC1EA093-6E6C-4E7A-8953-ECBB4C668374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC1EA093-6E6C-4E7A-8953-ECBB4C668374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BF2556-42AD-40B8-9A97-8752DDCED136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BF2556-42AD-40B8-9A97-8752DDCED136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BF2556-42AD-40B8-9A97-8752DDCED136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BF2556-42AD-40B8-9A97-8752DDCED136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EEC73B2-B9D8-4122-A785-D127E964FD04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEC73B2-B9D8-4122-A785-D127E964FD04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEC73B2-B9D8-4122-A785-D127E964FD04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEC73B2-B9D8-4122-A785-D127E964FD04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA90CB3-AACB-4385-989E-99033B2C136A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA90CB3-AACB-4385-989E-99033B2C136A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA90CB3-AACB-4385-989E-99033B2C136A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA90CB3-AACB-4385-989E-99033B2C136A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199E6856-48CD-4182-A34B-190B77761E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199E6856-48CD-4182-A34B-190B77761E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199E6856-48CD-4182-A34B-190B77761E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199E6856-48CD-4182-A34B-190B77761E91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
