@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ProcessPayment.Models;
+using System;
 
 namespace ProcessPayment.Data.config
 {
@@ -13,6 +14,9 @@ namespace ProcessPayment.Data.config
             builder.Property(p => p.ExpirationDate).IsRequired();
             builder.Property(p => p.Amount).IsRequired().HasColumnType("decimal(18,2)");
             builder.Property(p => p.Id).ValueGeneratedOnAdd();
+            builder.Property(p => p.Status).HasConversion(
+                s => s.ToString(),
+                s => (PaymentState) Enum.Parse(typeof(PaymentState), s));
 
         }
     }
