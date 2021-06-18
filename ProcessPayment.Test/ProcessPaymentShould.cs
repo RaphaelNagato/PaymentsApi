@@ -3,14 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using NUnit.Framework;
 using ProcessPayment.API.Controllers;
-using ProcessPayment.Commons;
-using ProcessPayment.Core;
 using ProcessPayment.Core.Interfaces;
-using ProcessPayment.Data;
 using ProcessPayment.Dto;
 using ProcessPayment.Models;
 using System;
-using System.Threading.Tasks;
 
 namespace ProcessPayment.Test
 {
