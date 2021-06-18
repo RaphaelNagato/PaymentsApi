@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProcessPayment.API.Middlewares;
+using ProcessPayment.Data;
 using ProcessPayment.Models.ResponseModels;
 using System.Linq;
 
@@ -23,7 +25,9 @@ namespace ProcessPayment.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            
+            services.AddDbContext<AppDbContext>(
+                ctx => ctx.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
             // configure ApiController to send user-defined response when it encounters validation errors
             services.Configure<ApiBehaviorOptions>(options =>
             {
