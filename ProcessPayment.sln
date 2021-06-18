@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.API", "ProcessPayment.API\ProcessPayment.API.csproj", "{EC1EA093-6E6C-4E7A-8953-ECBB4C668374}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessPayment.API", "ProcessPayment.API\ProcessPayment.API.csproj", "{EC1EA093-6E6C-4E7A-8953-ECBB4C668374}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Data", "ProcessPayment.Data\ProcessPayment.Data.csproj", "{33BF2556-42AD-40B8-9A97-8752DDCED136}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessPayment.Data", "ProcessPayment.Data\ProcessPayment.Data.csproj", "{33BF2556-42AD-40B8-9A97-8752DDCED136}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Models", "ProcessPayment.Models\ProcessPayment.Models.csproj", "{2EEC73B2-B9D8-4122-A785-D127E964FD04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessPayment.Models", "ProcessPayment.Models\ProcessPayment.Models.csproj", "{2EEC73B2-B9D8-4122-A785-D127E964FD04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Dto", "ProcessPayment.Dto\ProcessPayment.Dto.csproj", "{DBA90CB3-AACB-4385-989E-99033B2C136A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessPayment.Dto", "ProcessPayment.Dto\ProcessPayment.Dto.csproj", "{DBA90CB3-AACB-4385-989E-99033B2C136A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Commons", "ProcessPayment.Commons\ProcessPayment.Commons.csproj", "{199E6856-48CD-4182-A34B-190B77761E91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessPayment.Commons", "ProcessPayment.Commons\ProcessPayment.Commons.csproj", "{199E6856-48CD-4182-A34B-190B77761E91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPayment.Core", "ProcessPayment.Core\ProcessPayment.Core.csproj", "{1490FB67-1314-4910-A6C4-CDD674A8C375}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{199E6856-48CD-4182-A34B-190B77761E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{199E6856-48CD-4182-A34B-190B77761E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{199E6856-48CD-4182-A34B-190B77761E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1490FB67-1314-4910-A6C4-CDD674A8C375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1490FB67-1314-4910-A6C4-CDD674A8C375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1490FB67-1314-4910-A6C4-CDD674A8C375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1490FB67-1314-4910-A6C4-CDD674A8C375}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
