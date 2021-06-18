@@ -11,6 +11,7 @@ using ProcessPayment.Core.Interfaces;
 using ProcessPayment.Core.PaymentGateways;
 using ProcessPayment.Data;
 using ProcessPayment.Models.ResponseModels;
+using ProcessPayment.API.Extensions;
 using System.Linq;
 
 namespace ProcessPayment.API
@@ -38,7 +39,8 @@ namespace ProcessPayment.API
             services.AddScoped<IExpensivePaymentGateway, ExpensivePaymentGateway>();
             services.AddScoped<IPremiumPaymentService, PremiumPaymentService>();
             services.AddAutoMapper(typeof(MappingProfiles));
-
+            services.AddMySwaggerDoc();
+            
             // configure ApiController to send user-defined response when it encounters validation errors
             services.Configure<ApiBehaviorOptions>(options =>
             {
@@ -62,6 +64,7 @@ namespace ProcessPayment.API
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseMiddleware<ExceptionMiddleware>();
+            app.UseMySwaggerDoc();
 
             app.UseHttpsRedirection();
 
