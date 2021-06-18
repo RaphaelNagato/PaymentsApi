@@ -11,7 +11,7 @@ namespace ProcessPayment.Data.config
             builder.Property(p => p.CreditCardNumber).IsRequired().HasMaxLength(16);
             builder.Property(p => p.CardHolder).IsRequired().HasMaxLength(25);
             builder.Property(p => p.ExpirationDate).IsRequired();
-            builder.Property(p => p.Amount).IsRequired().HasColumnName("decimal(18,2)");
+            builder.Property(p => p.Amount).IsRequired().HasColumnType("decimal(18,2)");
 
         }
     }
