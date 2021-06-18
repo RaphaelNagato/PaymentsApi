@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ProcessPayment.Models.ResponseModels
+﻿namespace ProcessPayment.Models.ResponseModels
 {
     public class ApiResponse
     {

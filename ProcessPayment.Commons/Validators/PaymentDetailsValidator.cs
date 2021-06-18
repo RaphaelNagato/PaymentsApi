@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
 using ProcessPayment.Dto;
 using System;
-using System.Text.RegularExpressions;
 
 namespace ProcessPayment.Commons.Validators
 {

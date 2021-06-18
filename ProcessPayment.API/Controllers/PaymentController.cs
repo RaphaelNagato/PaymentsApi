@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProcessPayment.Commons;
 using ProcessPayment.Dto;
-using ProcessPayment.Models;
 using ProcessPayment.Models.ResponseModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
