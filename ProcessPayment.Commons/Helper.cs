@@ -16,19 +16,15 @@ namespace ProcessPayment.Commons
         /// </summary>
         /// <param name="paymentDetails"></param>
         /// <returns></returns>
-        public static async Task<List<KeyValue>> ValidatePaymentDetails(PaymentDetailsDto paymentDetails)
+        public static async Task<List<string>> ValidatePaymentDetails(PaymentDetailsDto paymentDetails)
         {
-            List<KeyValue> validationErrors = new List<KeyValue>();
+            List<string> validationErrors = new List<string>();
             var validator = new PaymentDetailsValidator();
             var results = await validator.ValidateAsync(paymentDetails);
             if(!results.IsValid)
             {
-                validationErrors.AddRange(results.Errors.Select(error => new KeyValue
-                { 
-                    PropertyName = error.PropertyName,
-                    PropertyValue = error.ErrorMessage,
-                }));
-            }
+                validationErrors.AddRange(results.Errors.Select(error => error.ErrorMessage).ToList());
+            };
             return validationErrors;
         }
     }
