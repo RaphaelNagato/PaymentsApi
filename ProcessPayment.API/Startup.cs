@@ -5,6 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProcessPayment.API.Middlewares;
+using ProcessPayment.Commons;
+using ProcessPayment.Core;
+using ProcessPayment.Core.Interfaces;
+using ProcessPayment.Core.PaymentGateways;
 using ProcessPayment.Data;
 using ProcessPayment.Models.ResponseModels;
 using System.Linq;
@@ -29,6 +33,11 @@ namespace ProcessPayment.API
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<ICheapPaymentGateway, CheapPaymentGateway>();
+            services.AddScoped<IExpensivePaymentGateway, ExpensivePaymentGateway>();
+            services.AddScoped<IPremiumPaymentService, PremiumPaymentService>();
+            services.AddAutoMapper(typeof(MappingProfiles));
 
             // configure ApiController to send user-defined response when it encounters validation errors
             services.Configure<ApiBehaviorOptions>(options =>

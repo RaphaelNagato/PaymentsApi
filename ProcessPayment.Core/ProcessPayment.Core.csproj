@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProcessPayment.Data\ProcessPayment.Data.csproj" />
+    <ProjectReference Include="..\ProcessPayment.Dto\ProcessPayment.Dto.csproj" />
+    <ProjectReference Include="..\ProcessPayment.Models\ProcessPayment.Models.csproj" />
+  </ItemGroup>
+
+</Project>
