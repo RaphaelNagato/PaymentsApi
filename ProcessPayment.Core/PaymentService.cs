@@ -21,7 +21,11 @@ namespace ProcessPayment.Core
             _premiumPaymentService = premiumPaymentService;
         }
 
-
+        /// <summary>
+        /// Logic to Add Payment to database using Unit Of Work Pattern
+        /// </summary>
+        /// <param name="payment"></param>
+        /// <returns></returns>
         public async Task<bool> AddPayment(Payment payment)
         {
             Payment processedPayment = payment;
@@ -77,7 +81,7 @@ namespace ProcessPayment.Core
                 }
                 count++;
 
-            } while (count < 3);
+            } while (count < 3); // try up to 3 times
             _unitOfWork.PaymentRepository.Add(processedPayment);
             return processedPayment;
         }
@@ -86,6 +90,7 @@ namespace ProcessPayment.Core
         {
             //process with ICheapPaymentGateway
             Payment processedPayment = _cheapPaymentGateway.ProcessPayment(payment);
+
             //add to context
             _unitOfWork.PaymentRepository.Add(processedPayment);
             return processedPayment;

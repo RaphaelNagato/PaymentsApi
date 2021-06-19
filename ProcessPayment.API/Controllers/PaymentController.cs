@@ -37,7 +37,10 @@ namespace ProcessPayment.API.Controllers
                 return BadRequest(errorResponse);
             }
 
+            // Map details to payment after validation 
             Payment incomingPayment = _mapper.Map<PaymentDetailsDto, Payment>(paymentDetails);
+
+            // call payment service to add payment
             var result = await _paymentService.AddPayment(incomingPayment);
             if(result)
             {
